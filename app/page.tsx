@@ -1,0 +1,21 @@
+// import Image from "next/image";
+import CarouselDemo from "@/components/carousel-demo";
+import DIgitalItems from "@/components/digital-Items";
+import Title from "@/components/new-products/title";
+import NewProducts from "@/components/new-products";
+export default function Home() {
+  return (
+    <main className="flex flex-col justify-center items-center lg:bg-custom-gray/20 pt-6 lg:pt-12 pb-24 w-full">
+      <section className="flex justify-center items-center mx-auto container">
+        <CarouselDemo slides={5} />
+      </section>
+      <section className="flex justify-center items-center mt-27 px-6 lg:px-0 rounded-md container">
+        <DIgitalItems />
+      </section>
+      <Title />
+      <section className="flex justify-center items-center px-6 lg:px-0 rounded-md container">
+        <NewProducts />
+      </section>
+    </main>
+  );
+}

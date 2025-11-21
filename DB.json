@@ -1,0 +1,74 @@
+{
+    "digitalItems": [
+        {
+            "image": "/images/phone.jpg",
+            "title": "گوشی موبایل",
+            "icon": "/vectors/digital-items/mobile.svg",
+            "count": 46
+        },
+        {
+            "image": "/images/watch.jpg",
+            "title": "ساهت هوشمند",
+            "icon": "/vectors/digital-items/watch.svg",
+            "count": 300
+        },
+        {
+            "image": "/images/headphone.jpg",
+            "title": "هدفون و هندزفری",
+            "icon": "/vectors/digital-items/headphone.svg",
+            "count": 168
+        },
+        {
+            "image": "/images/wifi.jpg",
+            "title": "مودم و شبکه",
+            "icon": "/vectors/digital-items/wifi.svg",
+            "count": 12
+        },
+        {
+            "image": "/images/laptop.jpg",
+            "title": "لپ تاپ و کامپیوتر",
+            "icon": "/vectors/digital-items/laptop.svg",
+            "count": 139
+        },
+        {
+            "image": "/images/mouse.jpg",
+            "title": "اکسسوری کامپیوتر",
+            "icon": "/vectors/digital-items/mouse.svg",
+            "count": 35
+        }
+    ],
+    "newProducts": [
+        {
+            "image": "/images/phone-1.jpg",
+            "description": " گوشی موبایل شیائومی Redmi Note 14S 4G حافظه 256 گیگابایت  و رم 8 گیگابایت....",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/phone-2.jpg",
+            "description": " گوشی آیفون 16 حافظه256 گیگابایت",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/phone-3.jpg",
+            "description": " گوشی موبایل شیائومی Redmi Note 14S 4G حافظه 256 گیگابایت  و رم 8 گیگابایت....",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/laptop-1.jpg",
+            "description": "لپ تاپ ایسوس مدل vivo book",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        }
+    ]
+}
