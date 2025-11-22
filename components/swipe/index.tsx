@@ -60,7 +60,7 @@ function SwipeDemo() {
           </div>
         </SwiperSlide>
       ))}
-      <div className='flex justify-between items-center mt-9 w-full'>
+      <div className='flex justify-between items-center mt-9 px-3 lg:px-0 w-full'>
         <span className='relative flex justify-between items-center w-6'>
           {/* Arrow Left */}
           <Button variant="outline" onClick={() => swiperRef.current?.swiper.slidePrev()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none ml-3 lg:ml-3 px-6 border-0 w-9 min-w-9 h-9 min-h-9 cursor-pointer'>
@@ -76,7 +76,7 @@ function SwipeDemo() {
           </Button>
         </span>
         {/* Dotes */}
-        <span className='relative flex justify-center items-center gap-x-1.5 h-3 min-h-3'>
+        <span className='relative flex justify-center items-center gap-x-1.5 mr-3 lg:mr-0 h-3 min-h-3'>
           {/* Transition indicator */}
           <motion.span
             key={animateKey}

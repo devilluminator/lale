@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import CarouselDemo from "@/components/carousel-demo";
+// import CarouselDemo from "@/components/carousel-demo";
 import DIgitalItems from "@/components/digital-Items";
 import Title from "@/components/new-products/title";
 import NewProducts from "@/components/new-products";
