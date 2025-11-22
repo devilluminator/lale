@@ -87,9 +87,9 @@ function CarouselDemo({ slides = 3 }: CarouselDemoProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        {/* Arrow Left */}
-        <div className='-bottom-18 absolute flex justify-between items-center container'>
+        <div className='absolute -bottom-18 left-0 right-0 flex justify-between items-center w-full px-4 lg:px-6'>
           <span className='relative flex justify-between items-center w-6'>
+            {/* Arrow Left */}
             <Button variant="outline" onClick={() => api?.scrollPrev()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none ml-10 lg:ml-3 px-6 border-0 cursor-pointer'>
               <Image src="/vectors/Vector.svg" alt="Previous" width={24} height={24} className='z-1 absolute -ml-9 scale-110' />
               <span className='absolute bg-custom-light-blue rounded-full w-9 h-9'></span>
