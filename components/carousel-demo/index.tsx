@@ -60,7 +60,7 @@ function CarouselDemo({ slides = 3 }: CarouselDemoProps) {
   }, [current, count]);
 
   return (
-    <div className='relative flex justify-center items-center rounded-md w-full max-w-full select-none pl-6'>
+    <div className='relative flex justify-center items-center pl-6 rounded-md w-full max-w-full select-none'>
       <Carousel className='rounded-md w-full max-w-full'
         setApi={setApi}
         // ! Active this one for auto transition
@@ -88,27 +88,27 @@ function CarouselDemo({ slides = 3 }: CarouselDemoProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className='absolute -bottom-18 left-0 right-0 flex justify-between items-center w-full px-4 lg:px-6'>
+        <div className='right-0 -bottom-18 left-0 absolute flex justify-between items-center px-4 lg:px-6 w-full'>
           <span className='relative flex justify-between items-center w-6'>
             {/* Arrow Left */}
-            <Button variant="outline" onClick={() => api?.scrollPrev()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none ml-3 lg:ml-3 px-6 border-0 cursor-pointer w-9 h-9 min-w-[36px] min-h-[36px]'>
+            <Button variant="outline" onClick={() => api?.scrollPrev()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none ml-3 lg:ml-3 px-6 border-0 w-9 min-w-9 h-9 min-h-9 cursor-pointer'>
               <Image src="/vectors/Vector.svg" alt="Previous" width={24} height={24} className='z-1 absolute -ml-9 scale-110 pointer-events-none' />
               <span className='absolute bg-custom-light-blue rounded-full w-9 h-9 pointer-events-none'></span>
               <span className='z-1 absolute bg-custom-blue p-[1.25px] rounded-full w-1.5 pointer-events-none'></span>
             </Button>
             {/* Arrow Right */}
-            <Button variant="outline" onClick={() => api?.scrollNext()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none mr-2 px-6 border-0 cursor-pointer w-9 h-9 min-w-[36px] min-h-[36px]'>
+            <Button variant="outline" onClick={() => api?.scrollNext()} className='relative flex justify-center items-center bg-transparent hover:bg-transparent shadow-none mr-2 px-6 border-0 w-9 min-w-9 h-9 min-h-9 cursor-pointer'>
               <Image src="/vectors/Vector.svg" alt="Next" width={24} height={24} className='z-1 absolute -mr-9 rotate-180 scale-110 pointer-events-none' />
               <span className='absolute bg-custom-light-blue rounded-full w-9 h-9 pointer-events-none'></span>
               <span className='z-1 absolute bg-custom-blue p-[1.25px] rounded-full w-1.5 pointer-events-none'></span>
             </Button>
           </span>
           {/* Dotes */}
-          <span className='relative flex justify-center items-center gap-x-1.5 mr-9 lg:mr-9 h-3 min-h-[12px]'>
+          <span className='relative flex justify-center items-center gap-x-1.5 mr-9 lg:mr-9 h-3 min-h-3'>
             {/* Transition indicator */}
             <motion.span
               key={animateKey}
-              className={cn("z-12 absolute bg-custom-blue rounded-full w-2 h-2 transition-all duration-300 pointer-events-none top-1/2 -translate-y-1/2", api?.scrollNext && "ease-in", api?.scrollPrev && "ease-out")}
+              className={cn("top-1/2 z-12 absolute bg-custom-blue rounded-full w-2 h-2 transition-all -translate-y-1/2 duration-300 pointer-events-none", api?.scrollNext && "ease-in", api?.scrollPrev && "ease-out")}
               style={{ left: `${activeDotPosition}px` }}
               initial={{ width: '21px' }}
               animate={{ width: '8px' }}

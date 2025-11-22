@@ -22,7 +22,7 @@ type Product = {
 
 function NewProducts() {
     const products: Product[] = DB.newProducts;
-   
+
 
     return (
         <>
@@ -31,9 +31,9 @@ function NewProducts() {
                 spaceBetween={15}
                 freeMode={true}
                 modules={[FreeMode, Pagination]}
-                className="mySwiper relative"
+                className="relative mySwiper"
                 initialSlide={products.length - 1}
-               
+
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -70,7 +70,7 @@ function NewProducts() {
                         </SwiperSlide>
                     ))
                 }
-              
+
             </Swiper>
         </>
     )
