@@ -63,7 +63,7 @@ function CarouselDemo({ slides = 3 }: CarouselDemoProps) {
     <div className='relative flex justify-center items-center rounded-md w-full select-none'>
       <Carousel className='rounded-md w-full'
         setApi={setApi}
-        // plugins={[plugin.current]}
+        plugins={[plugin.current]}
         opts={{ loop: true }}>
         <CarouselContent>
           {Array.from({ length: slideCount }).map((_, index) => (
