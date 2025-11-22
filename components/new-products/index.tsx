@@ -1,9 +1,10 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
+import TransitionIndicator from './Transition-indicator';
 import DB from "@/DB.json";
 // Import Swiper styles
 import 'swiper/css';
@@ -22,6 +23,9 @@ type Product = {
 
 function NewProducts() {
     const products: Product[] = DB.newProducts;
+    const [currentIndex, setCurrentIndex] = useState<number>(products.length - 1);
+    const [slidesLength, setSlidesLength] = useState<number>(products.length);
+
     return (
         <>
             <Swiper
@@ -29,8 +33,27 @@ function NewProducts() {
                 spaceBetween={15}
                 freeMode={true}
                 modules={[FreeMode, Pagination]}
-                className="mySwiper"
+                className="mySwiper relative"
                 initialSlide={products.length - 1}
+                onSwiper={(swiper) => {
+                    setSlidesLength(swiper.slides.length);
+                    console.log('Swiper initialized:', {
+                        slidesLength: swiper.slides.length,
+                        currentIndex: swiper.activeIndex
+                    });
+                }}
+                onSlideChange={(swiper) => {
+                    setCurrentIndex(swiper.activeIndex);
+                    console.log('Swiper slide changed:', {
+                        activeIndex: swiper.activeIndex,
+                        realIndex: swiper.realIndex,
+                        previousIndex: swiper.previousIndex,
+                        isBeginning: swiper.isBeginning,
+                        isEnd: swiper.isEnd,
+                        currentIndex: swiper.activeIndex,
+                        slidesLength: slidesLength
+                    });
+                }}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -67,6 +90,9 @@ function NewProducts() {
                         </SwiperSlide>
                     ))
                 }
+                <span className=''>
+                    <TransitionIndicator current_silde={currentIndex} slides={slidesLength}/>
+                </span>
             </Swiper>
         </>
     )

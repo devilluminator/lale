@@ -38,7 +38,7 @@ export function Search() {
           onChange={(e) => setInputValue(e.target.value)}
         />
         {isMobile && !inputValue && (
-          <div className="left-0 absolute inset-y-0 flex justify-end items-center px-4 w-full text-gray-400 text-right pointer-events-none">
+          <div className="left-0 text-sm absolute inset-y-0 flex justify-end items-center px-4 w-full text-gray-400 text-right pointer-events-none">
             <span className="font-bold text-black">تک استور</span> <span className="ml-1">جستجو در</span>
           </div>
         )}
