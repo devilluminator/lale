@@ -8,6 +8,7 @@
   --color-custom-blue: #0968F6;
   --color-custom-border-gray: #C5C5C5;
   --color-custom-light-blue: #E6F0FE;
+  --color-custom-yello: #DCA705;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -127,5 +128,29 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Add line-clamp utilities */
+@layer utilities {
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 }

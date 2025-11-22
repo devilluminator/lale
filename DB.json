@@ -70,5 +70,80 @@
             "off": false,
             "offPercentage": 0
         }
-    ]
+    ],
+    "bestSelling":[
+        {
+            "image": "/images/bestselling/1.jpg",
+            "description": " گوشی موبایل شیائومی Redmi Note 14S 4G حافظه 256 گیگابایت  و رم 8 گیگابایت....",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/bestselling/2.jpg",
+            "description": " گوشی آیفون 16 حافظه256 گیگابایت",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/bestselling/3.jpg",
+            "description": " گوشی موبایل شیائومی Redmi Note 14S 4G حافظه 256 گیگابایت  و رم 8 گیگابایت....",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        },
+        {
+            "image": "/images/bestselling/4.jpg",
+            "description": " گوشی موبایل شیائومی Redmi Note 14S 4G حافظه 256 گیگابایت  و رم 8 گیگابایت....",
+            "price": "۴۲٬۰۰۰٬۰۰۰ تومان",
+            "popular": false,
+            "off": false,
+            "offPercentage": 0
+        
+    }],
+    "newServices":[{
+        "title":"آپدیت نرم‌افزاری و نصب برنامه‌ها",
+        "reservation":892,
+        "stars":4.5,
+        "price": "۴۲٬۰۰۰٬۰۰۰",
+        "popular":true,
+        "off":true,
+        "offPercentage":30,
+        "icon":"/images/newservices/1.svg"
+    },
+    {
+         "title":"تعمیر و عیب‌یابی دستگاه",
+        "reservation":892,
+        "stars":4.5,
+        "price": "۴۲٬۰۰۰٬۰۰۰",
+        "popular":true,
+        "off":true,
+        "offPercentage":30,
+        "icon":"/images/newservices/2.svg"
+    },
+    {
+         "title":"مشاوره خرید گوشی",
+        "reservation":892,
+        "stars":4.5,
+        "price": "۴۲٬۰۰۰٬۰۰۰",
+        "popular":true,
+        "off":true,
+        "offPercentage":30,
+        "icon":"/images/newservices/3.svg"
+    },
+    {
+         "title":"بسته‌بندی هدیه و شخصی‌سازی",
+        "reservation":892,
+        "stars":4.5,
+        "price": "۴۲٬۰۰۰٬۰۰۰",
+        "popular":true,
+        "off":true,
+        "offPercentage":30,
+        "icon":"/images/newservices/4.svg"
+    }
+]
 }

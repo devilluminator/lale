@@ -1,10 +1,9 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from "@/components/ui/card"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Pagination } from 'swiper/modules';
-import TransitionIndicator from './Transition-indicator';
 import DB from "@/DB.json";
 // Import Swiper styles
 import 'swiper/css';
@@ -23,8 +22,7 @@ type Product = {
 
 function NewProducts() {
     const products: Product[] = DB.newProducts;
-    const [currentIndex, setCurrentIndex] = useState<number>(products.length - 1);
-    const [slidesLength, setSlidesLength] = useState<number>(products.length);
+   
 
     return (
         <>
@@ -35,25 +33,7 @@ function NewProducts() {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper relative"
                 initialSlide={products.length - 1}
-                onSwiper={(swiper) => {
-                    setSlidesLength(swiper.slides.length);
-                    console.log('Swiper initialized:', {
-                        slidesLength: swiper.slides.length,
-                        currentIndex: swiper.activeIndex
-                    });
-                }}
-                onSlideChange={(swiper) => {
-                    setCurrentIndex(swiper.activeIndex);
-                    console.log('Swiper slide changed:', {
-                        activeIndex: swiper.activeIndex,
-                        realIndex: swiper.realIndex,
-                        previousIndex: swiper.previousIndex,
-                        isBeginning: swiper.isBeginning,
-                        isEnd: swiper.isEnd,
-                        currentIndex: swiper.activeIndex,
-                        slidesLength: slidesLength
-                    });
-                }}
+               
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -78,21 +58,19 @@ function NewProducts() {
                                         unoptimized={true}
                                         className="mb-4 rounded-md lg:min-h-[217px] object-cover aspect-3/2"
                                     />
-                                    <h3 className="mb-2 min-h-14 overflow-hidden font-semibold text-sm text-right line-clamp-2" dir='rtl'>{product.description || `Product ${index}`}</h3>
+                                    <h3 className="mb-2 min-h-14 overflow-hidden font-semibold text-xs text-right line-clamp-2" dir='rtl'>{product.description || `Product ${index}`}</h3>
                                     <span className="flex justify-between items-center gap-0.5 pb-4 w-full text-gray-500 text-sm" dir='rtl'>
                                         <span className="flex justify-center items-center bg-custom-light-blue p-1 rounded-[12px] lg:rounded-[21px] w-9 lg:w-[51px] h-9 lg:h-[51px]">
                                             <Image src="/vectors/bag.svg" alt="Cart" width={26} height={26} unoptimized={true} className='w-5 lg:w-[26px] h-5 lg:h-[26px] object-contain' />
                                         </span>
-                                        <span className='font-semibold text-[15px] text-black lg:text-sm'> {product.price || 'N/A'}</span>
+                                        <span className='font-semibold text-[14px] text-black lg:text-sm'> {product.price || 'N/A'}</span>
                                     </span>
                                 </CardContent>
                             </Card>
                         </SwiperSlide>
                     ))
                 }
-                <span className=''>
-                    <TransitionIndicator current_silde={currentIndex} slides={slidesLength}/>
-                </span>
+              
             </Swiper>
         </>
     )

@@ -5,7 +5,9 @@ type TransitionIndicatorProps={
 }
 function TransitionIndicator(props:TransitionIndicatorProps) {
   return (
-    <div>TransitionIndicator</div>
+    <div>{
+        props.current_silde
+      }</div>
   )
 }
 
