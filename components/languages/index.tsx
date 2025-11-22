@@ -16,7 +16,7 @@ function SelectLanguage() {
   return (
 
     <DropdownMenu>
-      <DropdownMenuTrigger className='flex flex-row-reverse justify-center items-center gap-1 p-1.5 hover:bg-custom-border-gray/20 rounded-md min-w-[60px] w-[99px] max-w-[99px]  cursor-pointer'>{selectedLanguage === "FA" ? " فارسی " : " English "} <GlobeIcon /> </DropdownMenuTrigger>
+      <DropdownMenuTrigger className='flex flex-row-reverse justify-center items-center gap-1 p-1.5 hover:bg-custom-border-gray/20 rounded-md min-w-[60px] w-[99px] max-w-[99px] cursor-pointer'>{selectedLanguage === "FA" ? " فارسی " : " English "} <GlobeIcon /> </DropdownMenuTrigger>
       <DropdownMenuContent className='ml-3 lg:ml-0 text-right'>
         <DropdownMenuLabel>انتخاب زبان</DropdownMenuLabel>
         <DropdownMenuSeparator />

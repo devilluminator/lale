@@ -11,7 +11,7 @@ import Login from '@/components/register'
 function TopHeader() {
   return (
     <div className='flex justify-center items-center px-5 lg:px-0 py-6 border-0 border-custom-border-gray lg:border-b w-full'>
-      <div className='flex flex-row-reverse justify-center items-center gap-4 container'>
+      <div className='flex flex-row-reverse justify-center items-center gap-1.5 lg:gap-4 container'>
         {/* Icon */}
         <Link href="./" className='hidden lg:block'>
           <span className='flex justify-center items-center gap-1 w-auto min-w-[90px]'>
